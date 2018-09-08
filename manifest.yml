@@ -1,0 +1,8 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: ProfessionalNotesMX
+  buildpack: python_buildpack
+  command: gunicorn --env DJANGO_SETTINGS_MODULE=ProfessionalNotesMX.settings.production ProfessionalNotesMX.wsgi -b 0.0.0.0:$PORT
+  memory: 128M
