@@ -3,6 +3,7 @@ from django.conf.urls import url
 from . import views
 
 from app.Tutor.views import ListViewTutor
+from app.Asignatura.views import ListViewAsignatura
 
 urlpatterns = [
                url(r'^$', views.index, name='index'),

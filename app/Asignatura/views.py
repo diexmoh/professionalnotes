@@ -8,6 +8,6 @@ from ..Asignatura.models import Asignatura
 
 # Create your views here.
 class ListViewAsignatura(ListView):
-    model = Aignatura
+    model = Asignatura
     template_name = 'asignatura.html'
     context_object_name = 'asignaturas'
