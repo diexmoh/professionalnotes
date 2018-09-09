@@ -25,6 +25,9 @@ INSTALLED_APPS = [
                   'django.contrib.staticfiles',
                   'livereload',
                   'app',
+                  'app.Tutor',
+                  'app.Asignatura',
+                  'app.Alumno',
                   ]
 
 MIDDLEWARE = [
@@ -61,6 +64,13 @@ WSGI_APPLICATION = 'ProfessionalNotesMX.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
                             {

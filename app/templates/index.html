@@ -1,43 +1,159 @@
 <!DOCTYPE html>
-<html style="background-color: #f8f6f8;">
+<html>
 
 <head>
-    <title>IBM Cloud Web Starter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css"></link>
-    {% load static %}
-    <link rel="stylesheet" href="/static/css/default.css"></link>
-    <script src="{% static 'js/bundle.js' %}" charset="utf-8"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professional Notes </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font: 400 15px/1.8 "Lato", sans-serif;
+      color: #777;
+    }
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .bgimg-1 {
+      background-image: url("../static/estudiantes.jpg");
+      min-height: 100%;
+    }
+
+    .bgimg-2 {
+      background-image: url("../static/estudiantes3.jpg");
+      min-height: 400px;
+    }
+
+    .bgimg-3 {
+      background-image: url("../static/estudiantes5.jpg");
+      min-height: 400px;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .caption a.border {
+      background-color: #a62230;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }
+
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+
+    @media only screen and (max-device-width: 1024px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div id="new-container">
 
-    <div class="ibm-cloud">
-        <img src="{% static 'images/cloud-header.png' %}">
+  <div class="bgimg-1">
+    <div class="caption">
+      <a href="" class="border">Professional Notes</a>
+
     </div>
+  </div>
 
-    <h1 class="title">Congratulations!</h1>
-    <h2 class="subtitle">You are currently running a Django server.</h2>
-
-    <div class="link-section">
-        <div class="left-link-items">
-            <ul class="the-links">
-                <li class="link-item"><img class="right-arrow" src="{% static 'images/arrow-right-transparent-smaller.png' %}"><a href="https://console.bluemix.net/developer/appservice/dashboard?env_id=ibm%3Ayp%3Aus-south">Visit IBM Cloud App Service</a></li>
-                <li class="link-item"><img class="right-arrow" src="{% static 'images/arrow-right-transparent-smaller.png' %}"><a href="https://slack-invite-ibm-cloud-tech.mybluemix.net/">Ask questions on Slack</a></li>
-
-            </ul>
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Bienvenidos a Professional Notes</h3>
+    <br>
+    <p align="center">El fin de este proyecto es crear un espacio en el que los alumnos del nivel medio superior accedan a información de cualquier materia que requieran. <br> Ventajas que ofrecemos:</p>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-diamond text-danger mb-3 sr-icons"></i>
+            <h3 class="mb-3">Calidad</h3>
+            <p class="text-muted mb-0">La información proviene de profesores con amplia experiencia.</p>
+          </div>
         </div>
-
-        <div class="right-link-items">
-            <ul class="the-links">
-                <!-- Here we could have the language as a variable, and we'd provide the appropriate tag/links -->
-
-                <li class="link-item"><img class="right-arrow" src="{% static 'images/arrow-right-transparent-smaller.png' %}"><a href="https://www.ibm.com/cloud/cli">Install IBM Cloud Developer Tools</a></li>
-                <li class="link-item"><img class="right-arrow" src="{% static 'images/arrow-right-transparent-smaller.png' %}"><a href="https://datascience.ibm.com/">Learn about IBM’s Data Science Experience</a></li>
-
-            </ul>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-paper-plane text-danger mb-3 sr-icons"></i>
+            <h3 class="mb-3">Comunicación</h3>
+            <p class="text-muted mb-0">Si tienes dudas, puedes contactar a un profesor.</p>
+          </div>
         </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-newspaper-o text-danger mb-3 sr-icons"></i>
+            <h3 class="mb-3">Alcance</h3>
+            <p class="text-muted mb-0">Accede desde cualquier lugar en el que se encuentres.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-heart text-danger mb-3 sr-icons"></i>
+            <h3 class="mb-3">Pasión</h3>
+            <p class="text-muted mb-0">Fomentando el interés por el aprendizaje.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <a href="" class="border">Bienvenidos a Professional Notes</a>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p><strong>Software desarrollado en MXHACKS V.</strong> Hackaton 7 al 9 de septiembre del 2018 en Palacio de Minería.</p>
+    </div>
+  </div>
+
+  <div class="bgimg-3">
+    <div class="caption">
+       <p></p>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p><strong>¿Alguna vez te ha pasado que tienes un examen muy importante y no encuentras fuentes confiables?</strong> Ahora tienes la oportunidad de comunicarte con profesores para que te orienten en los temas que debes estudiar y que además te proporcionen los apuntes, videos o cualquier material que requieras.</p>
+    </div>
+  </div>
+
+  <div class="bgimg-1">
+    <div class="caption">
+      <a href="#" class="border">INGRESAR</a>
+    </div>
+  </div>
+
 </body>
+
 </html>
