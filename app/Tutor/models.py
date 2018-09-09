@@ -11,7 +11,7 @@ class Tutor(models.Model):
     idTutor = models.PositiveSmallIntegerField(primary_key = True, null = False, blank = False,)
     nombre = models.CharField(max_length = 200, null = False, blank = False,)
     descripcion = models.CharField(max_length = 500, null = False, blank = False,)
-    imagen = models.ImageField(upload_to = 'photos', null = False, blank = False,)
+    """imagen = models.ImageField(upload_to = 'photos', null = True, blank = True,)"""
     asignaturas = models.ManyToManyField(Asignatura)
 
     def __str__(self):
